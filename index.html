@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="todo-app">
+        <h2>To-Do List <img src="images/icon.png" alt="icon"></h2>
+        <button id="theme-toggle">Toggle Dark Mode</button> <!-- Dark Mode Toggle Button -->
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Add Your Text">
+            <input type="datetime-local" id="due-date">
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button onclick="addTask()">Add</button>
+        </div>
+        <div class="filters">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+            <button onclick="filterTasks('completed')">Completed</button>
+        </div>
+        <div class="progress-bar">
+            <div id="completion-percentage">0% completed</div> <!-- Completion Percentage -->
+            <div id="progress-bar-fill"></div> <!-- Progress bar itself -->
+        </div>
+        <ul id="list-container"></ul>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+<footer>Made By Aditya..!!!!!!</footer>
+</html>
